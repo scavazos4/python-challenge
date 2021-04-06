@@ -19,19 +19,30 @@ totalMonths = len(dates)
 totalProfit = sum(revenues)
 
 changeTotal = 0
-for i in revenues:
-    change = (i) - (i+1)
+profitTracker = (revenues[1]) - (revenues[0])
+lossTracker = (revenues[1]) - (revenues[0])
+
+for i in range(0,totalMonths-1):
+    change = (revenues[i+1]) - (revenues[i])
+    if change >= profitTracker:
+        profitTracker = change
+        dateTrackerProfit = dates[i+1]
+    elif change <= lossTracker:
+        lossTracker = change
+        dateTrackerLoss = dates[i+1]
     changeTotal += change
 
-AverageRevenueChange = changeTotal / totalMonths
+
+
+averageRevenueChange = changeTotal / totalMonths
 
 print("Financial Analysis")
 print("----------------------------")
 print(f"Total Months: {totalMonths}")
 print(f"Total Revenue: {totalProfit}")
-print(f"Average Revenue Change: {averageRevenue}")
-#    print(f"Greatest Increase in Profit: {dateTrackerProfit} $ {profitTracker2}" )
-#    print(f"Greatest Decrease in Profit: {dateTrackerLoss} $ {lossTracker2}" )
+print(f"Average Revenue Change: {averageRevenueChange}")
+print(f"Greatest Increase in Profit: {dateTrackerProfit} $ {profitTracker}" )
+print(f"Greatest Decrease in Profit: {dateTrackerLoss} $ {lossTracker}" )
 
 
 
