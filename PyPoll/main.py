@@ -84,10 +84,10 @@ with open (textoutput, 'w', newline='') as summary:
 ["----------------------------"],
 [f"Total Votes:  {TotalVotes}"],
 ["----------------------------",],
-[f"Khan:   {khanVotesPercent}   ({khanVotesTotal})"],
-[f"Correy:  + {correyVotesPercent}   ({correyVotesTotal}) "],
-[f"Li: + {liVotesPercent}   ({liVotesTotal}) " ],
-[f"O'Tooley  {oTooleyVotesPercent}    ({oTooleyVotesTotal}) "],
+[f"Khan:     {khanVotesPercent}%   ({khanVotesTotal})"],
+[f"Correy:   {correyVotesPercent}%   ({correyVotesTotal}) "],
+[f"Li:       {liVotesPercent}%   ({liVotesTotal}) " ],
+[f"O'Tooley  {oTooleyVotesPercent}%    ({oTooleyVotesTotal}) "],
 ["----------------------------"],
 [f"Winner:  {winnerName} with {winnerVotes} Votes"]
     ])
